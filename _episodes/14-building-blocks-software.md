@@ -3,24 +3,23 @@ title: "LECTURE: Computational Building Blocks: Software"
 teaching: 30
 exercises: 0
 questions:
-- "To be determined"
+- "What is an OS?"
+- "What OSs do HPC facilities use?"
+- "What are processes?"
+- "What are threads?"
 objectives:
-- "To be determined"
+- "Understanding the software behind HPC systems."
+- "Learning what these components are used for."
 keypoints:
-- "To be determined"
+- "Most HPC systems run UNIX or Linux as an OS."
+- "Each application is a seperate process; the OS will schedule any process."
+- "Threads are sub-processes that compose a process."
 ---
 
-## Processors
+## Slides
 
-## Cores
-
-## Memory
-
-## Accelerators
-
-## Operating systems
-
-## Processes and threads
+This part of the course will be delivered using a slide presentation. You can 
+find the slides for this [here](../slide/14-building-blocks-software.pdf).
 
 {% include links.md %}
 
