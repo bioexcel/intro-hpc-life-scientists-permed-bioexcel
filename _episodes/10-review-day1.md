@@ -1,16 +1,14 @@
 ---
-title: "LECTURE: Review of Day 1"
+title: "REVIEW: Review of Day 1"
 teaching: 5
 exercises: 0
 questions:
-- ""
+- "What have we learned today?"
+- "What would you like us to focus on more tomorrow?"
 objectives:
-- ""
-keypoints:
-- "To be determined"
+- "Reviewing what we have learned today."
+- "Describing what will be taught tomorrow."
+- "Discuss whether any parts of the material require clarifications."
 ---
 
-## 
-
-{% include links.md %}
-
+## Review of Day 1

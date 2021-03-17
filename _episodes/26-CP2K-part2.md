@@ -1,13 +1,13 @@
 ---
-title: "QM/MM Simulations Using CP2K"
+title: "PRACTICAL: QM/MM Simulations Using CP2K 2"
 teaching: 10
 exercises: 20
 questions:
-- "To be determined"
+- ""
 objectives:
-- "To be determined"
+- ""
 keypoints:
-- "To be determined"
+- ""
 ---
 
 ## Message-passing interface (MPI)
