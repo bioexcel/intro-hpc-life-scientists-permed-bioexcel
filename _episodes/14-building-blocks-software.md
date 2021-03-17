@@ -19,7 +19,7 @@ keypoints:
 ## Slides
 
 This part of the course will be delivered using a slide presentation. You can 
-find the slides for this [here](../slide/14-building-blocks-software.pdf).
+find the slides for this [here](../slides/14-building-blocks-software.pdf).
 
 {% include links.md %}
 
