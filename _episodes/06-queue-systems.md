@@ -4,10 +4,10 @@ teaching: 20
 exercises: 0
 questions:
 - "What is a queueing system?"
-- "What is an application launcher"
-- "How do they work?"
+- "What is a (parallel) application launcher"
+- "How do these work?"
 objectives:
-- "Understanding of how job submission on HPC works"
+- "Understand how running an HPC job works"
 keypoints:
 - "To be determined"
 ---

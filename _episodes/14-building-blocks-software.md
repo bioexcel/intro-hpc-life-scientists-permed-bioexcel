@@ -3,10 +3,11 @@ title: "LECTURE: Computational Building Blocks: Software"
 teaching: 30
 exercises: 0
 questions:
-- "What is an OS?"
+- "What is an operating system (OS)?"
 - "What OSs do HPC facilities use?"
 - "What are processes?"
 - "What are threads?"
+- "How are processes and threads relevant to parallel computing?"
 objectives:
 - "Understanding the software behind HPC systems."
 - "Learning what these components are used for."

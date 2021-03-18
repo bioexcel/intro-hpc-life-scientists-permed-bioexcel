@@ -1,9 +1,9 @@
 ---
-title: "LECTURE: The HPC landcsape in the EU and UK"
+title: "LECTURE: The HPC landscape in the EU and UK"
 teaching: 30
 exercises: 0
 questions:
-- "To be determined"
+- "What HPC resources are available in the EU and in the UK?"
 objectives:
 - "To be determined"
 keypoints:
@@ -13,8 +13,6 @@ keypoints:
 ## HPC in the EU and UK
 
 ## HPC Europa
-
-## The Future of HPC
 
 {% include links.md %}
 

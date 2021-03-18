@@ -3,7 +3,7 @@ title: "LECTURE: Measuring Parallel Performance"
 teaching: 30
 exercises: 0
 questions:
-- "What is scaling?"
+- "What is parallel scaling?"
 - "How well does my application scale?"
 objectives:
 - "To be determined"

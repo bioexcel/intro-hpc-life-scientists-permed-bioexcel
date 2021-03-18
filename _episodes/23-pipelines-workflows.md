@@ -3,14 +3,15 @@ title: "LECTURE: Pipelines and Workflows"
 teaching: 45
 exercises: 0
 questions:
-- "To be determined"
+- "Is it possible to run data-intensive computational pipelines (e.g. bioinformatics) in parallel on HPC?"
+- "How about running defined workflows using workflow managers?"
 objectives:
 - "To be determined"
 keypoints:
 - "To be determined"
 ---
 
-## Bioinformatcs and pipelines
+## Bioinformatics and pipelines
 
 ## Hadoop
 

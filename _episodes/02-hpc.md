@@ -4,8 +4,6 @@ teaching: 15
 exercises: 5
 questions:
 - "What is high-performance computing?"
-- "What is a high-performance computer?"
-- "Why are computer clusters used?"
 objectives:
 - "Learning about computer clusters and how they are made"
 - "Understanding what differentiates a HPC system from a cluster"
@@ -16,7 +14,7 @@ keypoints:
 
 ## Defining high-performance computing
 
-The simplest way of defining hugh-performance computing is by saying that it
+The simplest way of defining high-performance computing is by saying that it
 is the using of high-performance computers. However, this leads to our next
 question.
 

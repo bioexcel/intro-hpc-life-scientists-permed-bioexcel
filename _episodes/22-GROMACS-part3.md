@@ -3,11 +3,11 @@ title: "PRACTICAL: Benchmarking Molecular Dynamics Using GROMACS 3"
 teaching: 10
 exercises: 20
 questions:
-- "What is multithreading?"
+- "Does simultaneous multithreading (SMT) improve GROMACS performance on ARCHER2?"
 - "How does load balancing affect GROMACS performance?"
 objectives:
-- "Understand what hyperthreading is, and how to use it on ARCHER2."
-- "Learn how to disable GROMACS dynamic load-balancing."
+- "Understand how to use simultaneous multithreading (SMT) on ARCHER2."
+- "Learn how to disable GROMACS dynamic load-balancing and appreciate the effect load balancing can have on performance."
 keypoints:
 - ""
 ---
@@ -15,7 +15,7 @@ keypoints:
 ## Two hardware threads per core
 
 The `--hint=nomultithread` asks SLURM to ignore the possibility of running
-two threads per core. If we remove this option, this makes available  256
+two threads per core. If we remove this option, this makes available 256
 "cpus" per node (2 threads per core in hardware). To run 8 MPI tasks with
 1 task per NUMA region running 32 OpenMP threads, the script would look like:
 
