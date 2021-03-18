@@ -12,5 +12,10 @@ keypoints:
 - "To be determined"
 ---
 
+## Slides
+
+This part of the course will be delivered using a slide presentation. You can
+find the slides for this [here](../slides/06-queue-systems.pdf).
+
 {% include links.md %}
 

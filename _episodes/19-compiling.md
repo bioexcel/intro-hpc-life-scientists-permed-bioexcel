@@ -14,15 +14,10 @@ keypoints:
 - "To be determined"
 ---
 
-## What is compiling?
+## Slides
 
-## Anatomy of a compiler
-
-## Compiler optimisations
-
-## Compilers and parallelisation
-
-## Different compilers
+This part of the course will be delivered using a slide presentation. You can
+find the slides for this [here](../slides/19-compiling.pdf).
 
 {% include links.md %}
 

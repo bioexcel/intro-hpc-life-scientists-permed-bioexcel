@@ -17,21 +17,10 @@ keypoints:
 - "To be determined"
 ---
 
-## Why parallel programming?
+## Slides
 
-### "But I'm not a programmer..."
-
-## Parallel decomposition
-
-### Geometric decomposition
-
-#### Load imbalance
-
-### Task farms
-
-### Pipelines
-
-### Loop parallelism
+This part of the course will be delivered using a slide presentation. You can
+find the slides for this [here](../slides/08-parallel-computing-patterns.pdf).
 
 {% include links.md %}
 

@@ -17,17 +17,10 @@ keypoints:
 - "To be determined"
 ---
 
-## Processors
+## Slides
 
-## Cores
-
-## Memory
-
-## Accelerators
-
-## Operating systems
-
-## Processes and threads
+This part of the course will be delivered using a slide presentation. You can
+find the slides for this [here](../slides/15-building-blocks-hardware.pdf).
 
 {% include links.md %}
 

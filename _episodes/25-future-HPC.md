@@ -11,7 +11,10 @@ keypoints:
 - "To be determined"
 ---
 
-## The Future of HPC
+## Slides
+
+This part of the course will be delivered using a slide presentation. You can
+find the slides for this [here](../slides/25-future-HPC.pdf).
 
 {% include links.md %}
 

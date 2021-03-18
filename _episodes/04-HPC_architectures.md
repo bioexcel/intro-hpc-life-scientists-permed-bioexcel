@@ -13,5 +13,10 @@ keypoints:
 - "To be determined"
 ---
 
+## Slides
+
+This part of the course will be delivered using a slide presentation. You can
+find the slides for this [here](../slides/04-HPC-architecture.pdf).
+
 {% include links.md %}
 

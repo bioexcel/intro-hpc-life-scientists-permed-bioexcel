@@ -17,11 +17,10 @@ keypoints:
 - "To be determined"
 ---
 
-## Shared-variables parallelism
+## Slides
 
-## Message-passing parallelism
-
-## Practicalities
+This part of the course will be delivered using a slide presentation. You can
+find the slides for this [here](../slides/17-parallel-programming-models.pdf).
 
 {% include links.md %}
 
