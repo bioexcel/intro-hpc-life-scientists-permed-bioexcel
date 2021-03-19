@@ -1,22 +1,25 @@
 ---
-title: "PRACTICAL: QM/MM Simulations Using CP2K 1"
+title: "PRACTICAL: QM/MM simulations with CP2K"
 teaching: 15
 exercises: 45
 questions:
-- ""
+- "When is using MPI+OpenMP useful?"
+- "Why is profiling code useful?"
+- "What are communication overheads and how these might change on different numbers of processes or threads?"
 objectives:
-- ""
+- "Run CP2K on multiple nodes with MPI+OpenMP"
+- "Understand the profiling report and what this can tell us about an application"
 keypoints:
-- ""
+- "It can be benefical to the performance to use MPI+OpenMP"
 ---
 
-## Message-passing interface (MPI)
+## Instructions
 
-## OpenMP
+You can find the instructions for this practical session [here](../slides/CP2K-instructions.pdf).
 
-## CUDA
+## Introductory slides
 
-## Scientific Libraries
+You can find the instructions for this practical session [here](../slides/CP2K-practical_overview.pdf).
 
 {% include links.md %}
 
