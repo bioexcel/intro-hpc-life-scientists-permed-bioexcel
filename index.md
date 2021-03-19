@@ -37,9 +37,12 @@ root: .
   through examples drawn from the life sciences, such as biomolecular 
   simulation.
 
+  This course is presented by:
+  
+  {% include figure.html url="" max-width="80%" file="/fig/banner.jpg"%}
+
 <hr/>
 
-{% include figure.html url="" max-width="80%" file="/fig/banner.jpg"%}
 
 <h2 id="general">General Information</h2>
 
