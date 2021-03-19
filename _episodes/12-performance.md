@@ -48,7 +48,7 @@ size/complexity *N* of the system and the number of processors/cores *P* being
 used to run this system. One way to measure performance could be to consider 
 the speedup of the system compared with a run on a single processor:
 
-![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)}).
+![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)}.)
 
 Ideally, the speedup increases in a linear fashion, meaning that as you double 
 the number of processors used, your speedup will also double. However, this is 
@@ -58,14 +58,14 @@ Another metric to consider is the parallel efficiency *E*(*N*, *P*). This is
 a measure of how the speedup changes as the number of processors used is 
 increased:
 
-![formula](https://render.githubusercontent.com/render/math?math=E(N,P) = \frac{S(N,P)}{P} = \frac{T(N,1)}{P T(N,P)}).
+![formula](https://render.githubusercontent.com/render/math?math=E(N,P) = \frac{S(N,P)}{P} = \frac{T(N,1)}{P T(N,P)}.)
 
 Given that, in general, *S*(*N*, *P*) < *P*, it follows that *E*(*N*, *P*) < 1.
 
 Finally, it can be useful to estimate the efficiency of the parts of your code 
 that run only in parallel. The serial efficiency *E*(*N*) is measured by:
 
-![formula](https://render.githubusercontent.com/render/math?math=E(N) = \frac{T_{best}(N)}{T(N,1)}).
+![formula](https://render.githubusercontent.com/render/math?math=E(N) = \frac{T_{best}(N)}{T(N,1)}.)
 
 ## Strong vs. weak scaling
 
@@ -94,7 +94,7 @@ proportion of the code which is serial". As more processors are used, the
 runtime becomes more and more dominated by the serial portion of a code.
 
 {% include figure.html url="" max-width="80%" file="/fig/12-performance/amdhal_illustration.jpg"
-alt="Illustration of Amdhal's law" caption="Illustration of Amdhal's law" %}
+alt="Illustration of Amdhal's law"%}
 
 > ## Analogy for Amdhal's law
 >
@@ -135,7 +135,7 @@ alt="Illustration of Amdhal's law" caption="Illustration of Amdhal's law" %}
 > parallel part of the code with 100% efficience, then:
 > - the hypothetical runtime in parallel is: 
 > <img src="https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(N,1) %2B \frac{(1-\alpha)T(N,1)}{P}">
-> - the hypothetical speedup is: ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{P}{\alpha P %2B (1 - \alpha)}).
+> - the hypothetical speedup is: ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{P}{\alpha P %2B (1 - \alpha)}.)
 >
 > This means that speedup is fundamentally limited by the serial fraction. No 
 > matter how large P becomes, the speedup <img src="https://render.githubusercontent.com/render/math?math=S(N,P) < \alpha^{-1}">
@@ -158,7 +158,7 @@ code, but this becomes less important, and we can run on more processors more
 efficiently.
 
 {% include figure.html url="" max-width="80%" file="/fig/12-performance/gustafson_illustration.jpg"
-alt="Illustration of Gustafson's law" caption="Illustration of Gustafson's law" %}
+alt="Illustration of Gustafson's law" %}
 
 > ## Analogy for Gustafson's law
 >
