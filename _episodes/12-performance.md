@@ -59,19 +59,23 @@ Measuring parallel performance can help us to understand:
 > for a fraction <img src="https://render.githubusercontent.com/render/math?math=\alpha">
 > of its runtime. If we can parallelise the potentially parallel part of the 
 > code with 100% efficience, then:
-> - the hypothetical runtime in parallel is: <img src="https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(N,1) %2B \frac{(1-\alpha)T(N,1)}{P}">
-> - the hypothetical speedup is: <img src="https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{P}{\alpha P %2B (1 - \alpha)}">.
+> - the hypothetical runtime in parallel is: <img src="https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(N,1) %2B \frac{(1-\alpha)T(N,1)}{P}&mode=inline">
+> - the hypothetical speedup is: <img src="https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{P}{\alpha P %2B (1 - \alpha)}&mode=inline">.
 >
 > This means that speedup is fundamentally limited by the serial fraction. No 
-> matter how large P becomes, the speedup <img src="https://render.githubusercontent.com/render/math?math=S(N,P) < \alpha^{-1}">
+> matter how large P becomes, the speedup <img src="https://render.githubusercontent.com/render/math?math=S(N,P) < \alpha^{-1}"&mode=inline>
 >
-> ### Example for <img src="https://render.githubusercontent.com/render/math?math=\alpha = 0.1">:
-> - On 2 processors, the hypothetical speedup is https://render.githubusercontent.com/render/math?math=S(N,P) = 1.8">
-> - On 16 processors, the hypothetical speedup is https://render.githubusercontent.com/render/math?math=S(N,P) = 6.4">
-> - On 1024 processors, the hypothetical speedup is https://render.githubusercontent.com/render/math?math=S(N,P) = 9.9">
+> ### Example for <img src="https://render.githubusercontent.com/render/math?math=\alpha = 0.1"&mode=inline>:
+> - On 2 processors, the hypothetical speedup is https://render.githubusercontent.com/render/math?math=S(N,P) = 1.8"&mode=inline>
+> - On 16 processors, the hypothetical speedup is https://render.githubusercontent.com/render/math?math=S(N,P) = 6.4"&mode=inline>
+> - On 1024 processors, the hypothetical speedup is https://render.githubusercontent.com/render/math?math=S(N,P) = 9.9"&mode=inline>
 >
 {: .callout}
 
+
+> ## Proof of Gustafson's Law
+> 
+> 
 ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{P}{\alpha P %2B (1 - \alpha)})
 
 ![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = T_{serial}(N,P) %2B T_{parallel}(N,P))
