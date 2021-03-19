@@ -69,6 +69,63 @@ that run only in parallel. The serial efficiency *E*(*N*) is measured by:
 
 ## Strong vs. weak scaling
 
+Scaling describes how the runtime of a parallel application changes as the 
+number of processors is increased. Usually, there are two types of scaling of 
+interest:
+- **strong scaling** is obtained by increasing the number of processors *P* 
+used for a problem of fixed size/complexity *N*. As the number of processors 
+increases, the amount of work per processor should decrease.
+- **weak scaling** is obtained by increasing both the number of processors 
+*and* the system size/complexity, with both of these being increased at the 
+same rate.
+
+Ideally, for strong scaling, the runtime will keep decreasing in direct 
+proportion to the growing number of processors used. For weak scaling, the 
+ideal situation is for the runtime to remain constant as the system size, and 
+number of processors used, are increased. In general, good strong scaling is 
+more relevant for most scientific problems, but is also more difficult to 
+achieve than weak scaling.
+
+### Amdhal's law and strong scaling
+
+The limitations of strong scaling are best illustrated by Amdhal's law: "The 
+performance improvement to be gained by parallelisation is limited by the 
+proportion of the code which is serial". As more processors are used, the 
+runtime becomes more and more dominated by the serial portion of a code.
+
+{% include figure.html url="" max-width="80%" file="/fig/12-performance/amdhal_illustration.jpg"
+alt="Illustration of Amdhal's law" caption="Illustration of Amdhal's law" %}
+
+> ## Analogy for Amdhal's law
+>
+> Consider a trip from Holyrood, Edinburgh to the Empire State building in New 
+> York. The distance from Edinburgh to New York is 5,200 km, and you can 
+> either fly with a Jumbo Jet (flight speed 700 km/hrs) or a Concorde (flight 
+> speed 2,100 km/hrs). What is the speedup of using the Concorde?
+>
+>> ## Solution
+>>
+>> The Jumbo Jet will cover that distance in around 7h30, and the Concorde 
+>> covers this in 2h00, so you might think that the speedup is 3.75x.
+>>
+>> **However**, in this problem, we are not starting in a plane about to take 
+>> off! There are additional times to take into consideration:
+>> - Trip to Edinburgh airport: 30 mins
+>> - Security and boarding: 1h30
+>> - US immigrations: 1h00
+>> - Taxi ride to downtown New York: 1h00
+>>
+>> There is a fixed overhead of 4 hrs that we can't reduce. When considering 
+>> this 4-hour overhead, we find that our total trip by Jumbo Jet takes 11h30, 
+>> whereas travelling by Concorde takes 6 hrs. Our speedup is therefore 1.92x 
+>> **not** 3.75x.
+>>
+>> Amdhal's law suggests that, the shorter the journey, the more important the 
+>> fixed (serial) overhead is in determining the total journey time.
+>> 
+> {: .solution}
+{: .challenge}
+
 > ## Proof of Amdhal's Law
 > 
 > Consider a typical program -- this will have sections of code that could 
@@ -91,6 +148,42 @@ that run only in parallel. The serial efficiency *E*(*N*) is measured by:
 {: .callout}
 
 
+### Gustafson's law and weak scaling
+
+Gustafson's law provides a solution to the limitations of strong scaling 
+described. The proposal is simply: we should run larger jobs on larger 
+processor counts. If we run larger problems, then the parallelisable part of 
+the problem will increase. We are still limited by the serial part of the 
+code, but this becomes less important, and we can run on more processors more 
+efficiently.
+
+{% include figure.html url="" max-width="80%" file="/fig/12-performance/gustafson_illustration.jpg"
+alt="Illustration of Gustafson's law" caption="Illustration of Gustafson's law" %}
+
+> ## Analogy for Gustafson's law
+>
+> Let's consider a new trip, one from Holyrood, Edinburgh to the Sydney Opera 
+> House in Sydney, Australia The distance from Edinburgh to Sydney is 16,800 
+> km. As with our trip to New York, you can  either fly with a Jumbo Jet 
+> (flight speed 700 km/hrs) or a Concorde (flight speed 2,100 km/hrs). Also, 
+> let's assume that the overhead is similar to that for a trip to New York (so 
+> 4 hours). What is the speedup of using the Concorde this time? 
+>
+>> ## Solution
+>>
+>> The Jumbo Jet will cover that distance in around 24 hrs for a total trip 
+>> time of 28 hrs, and the Concorde covers this distance in 8hrs for a total 
+>> trip time of 12 hrs. The speedup is therefor 2.3x (as opposed to 1.9x for 
+>> the trip to New York).
+>>
+>> This is Gustafson's law in effect! Bigger problems scale better. If we 
+>> increase **both** distance (*i.e.* *N*) **and** maximum speed (*i.e.* *P*), 
+>> we maintain the same balance of "serial" to "parallel", and get a better 
+>> speedup.
+>> 
+> {: .solution}
+{: .challenge}
+
 > ## Proof of Gustafson's Law
 > 
 > Let's assume that the parallel contribution to runtime is proportional 
@@ -110,11 +203,9 @@ that run only in parallel. The serial efficiency *E*(*N*) is measured by:
 > *E*(*P*, *P*) = &alpha; / P + (1 - &alpha;).
 {: .callout}
 
+## Load imbalance
 
-
-
-
-## Improving performance
+So far, we've only considered systems where all processors are equally busy.
 
 {% include links.md %}
 
