@@ -85,6 +85,11 @@ Measuring parallel performance can help us to understand:
 > where &alpha; is the non-parallelisable fraction of the code.
 > It follows that the speedup:
 > ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{\alpha %2B (1-\alpha)N}{\alpha %2B (1-\alpha) \frac{N}{P}})
+> If we scale the problem size with the number of processors (*e.g.* by setting *N* = 
+> *P* for weak scaling), then we expect a speedup 
+> *S*(*P*, *P*) = &alpha; + (1 - &alpha;)*P*
+> , and an efficiency
+> *E*(*P*, *P*) = &alpha; / P + (1 - &alpha;).
 {: .callout}
 
 
