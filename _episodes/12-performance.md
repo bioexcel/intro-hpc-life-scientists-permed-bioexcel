@@ -56,10 +56,10 @@ Measuring parallel performance can help us to understand:
 > Consider a typical program -- this will have sections of code that could 
 > potentially run in parallel, and sections that are inherently serial and 
 > can't run in parallel. Let's further suppose that the serial code accounts 
-> for a fraction ![alt text](https://render.githubusercontent.com/render/math?math=\alpha)
-> of its runtime. If we can parallelise the potentially parallel part of the 
-> code with 100% efficience, then:
-> - the hypothetical runtime in parallel is: <img src="https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(N,1) %2B \frac{(1-\alpha)T(N,1)}{P}&mode=inline" />
+> for a fraction &alpha of its runtime. If we can parallelise the potentially 
+> parallel part of the code with 100% efficience, then:
+> - the hypothetical runtime in parallel is: *T*(*N*,*P*) = &alpha *T*(*N*,1) + <box>(1 - &alpha)*T*(*N*,1) <over>*P*</box>
+> <img src="https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(N,1) %2B \frac{(1-\alpha)T(N,1)}{P}&mode=inline" />
 > - the hypothetical speedup is: ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{P}{\alpha P %2B (1 - \alpha)}).
 >
 > This means that speedup is fundamentally limited by the serial fraction. No 
