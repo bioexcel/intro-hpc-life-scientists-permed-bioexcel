@@ -1,6 +1,6 @@
 ---
 title: "REVIEW: Course review and where next?"
-teaching: 15
+teaching: 20
 exercises: 0
 questions:
 - "What have we learned over this course?"
