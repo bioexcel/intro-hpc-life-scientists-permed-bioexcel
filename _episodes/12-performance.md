@@ -59,11 +59,7 @@ Measuring parallel performance can help us to understand:
 > for a fraction α of its runtime. If we can parallelise the potentially 
 > parallel part of the code with 100% efficience, then:
 > - the hypothetical runtime in parallel is: 
-> ![equation](https://latex.codecogs.com/gif.latex?\large&space;T(N,P)&space;=&space;\alpha&space;T(N,1)&space;&plus;&space;\frac{(1-\alpha)T(N,1)}{P})
-> 
-> Blah
->
-> <img src="https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(N,1) %2B \frac{(1-\alpha)T(N,1)}{P}" />
+> <p><img src="https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(N,1) %2B \frac{(1-\alpha)T(N,1)}{P}" /></p>
 > - the hypothetical speedup is: ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{P}{\alpha P %2B (1 - \alpha)}).
 >
 > This means that speedup is fundamentally limited by the serial fraction. No 
