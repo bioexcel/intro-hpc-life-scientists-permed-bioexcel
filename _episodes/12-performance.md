@@ -3,19 +3,47 @@ title: "LECTURE: Measuring Parallel Performance"
 teaching: 30
 exercises: 0
 questions:
-- "What is parallel scaling?"
-- "How well does my application scale?"
+- "What is performance and how is it measured?"
+- "What is scalability?"
+- "What is meant by strong and weak scaling?"
 objectives:
-- "To be determined"
+- "Learning how to measure the performance of software."
+- "Understanding the difference between strong and weak scaling."
+- ""
 keypoints:
 - "To be determined"
 ---
 
-## What is performance and why does it matter?
+## Parallel performance
 
-Equation test codecogs: ![formula](<a href="https://www.codecogs.com/eqnedit.php?latex=e^{i\pi}&space;=&space;\frac{12}{11}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e^{i\pi}&space;=&space;\frac{12}{11}" title="e^{i\pi} = \frac{12}{11}" /></a>)
+> ## Why do we run applications in parallel?
+> 
+> In the course etherpad, write down why you think running applications in 
+> parallel is useful.
+> 
+{: .challenge}
 
-Equation test render.github: ![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = \frac{-1}{2})
+In general, there are two advantages to running applications in parallel: 
+(1) applications will run more quickly and we can get our solutions faster, 
+and (2) we can solve larger, more complex problems.
+
+In an ideal world, if we increase the number of cores we are using by a 
+factor of 10, we should be able to either get the solution to our current 
+problem 10 times faster, or to run a system 10 times bigger in the same 
+amount of time as now.
+
+Unfortunately, this is often not the case...
+
+Measuring parallel performance can help us to understand:
+
+- whether our application is making the most of the cores assigned to it
+- the factors that can improve or hinder performance
+- how best to use the application and available HPC resources
+
+### Defining performance using LAMMPS
+
+
+![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)})
 
 ## Strong vs. weak scaling
 
