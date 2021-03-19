@@ -39,6 +39,8 @@ root: .
 
 <hr/>
 
+{% include figure.html url="" max-width="80%" file="/fig/banner.jpg"%}
+
 <h2 id="general">General Information</h2>
 
 {% comment %}
