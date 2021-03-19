@@ -66,23 +66,26 @@ Measuring parallel performance can help us to understand:
 > matter how large P becomes, the speedup <img src="https://render.githubusercontent.com/render/math?math=S(N,P) < \alpha^{-1}">
 >
 > ### Example for &alpha; = 0.1
-> - On 2 processors, the hypothetical speedup is *S*(*N*,*P*) = 1.8
-> - On 16 processors, the hypothetical speedup is *S*(*N*,*P*) = 6.4
-> - On 1024 processors, the hypothetical speedup is *S*(*N*,*P*) =  9.9
+> - On 2 processors, the hypothetical speedup is *S*(*N*, *P*) = 1.8
+> - On 16 processors, the hypothetical speedup is *S*(*N*, *P*) = 6.4
+> - On 1024 processors, the hypothetical speedup is *S*(*N*, *P*) =  9.9
 >
 {: .callout}
 
 
 > ## Proof of Gustafson's Law
 > 
-> 
-![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{P}{\alpha P %2B (1 - \alpha)})
-
-![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = T_{serial}(N,P) %2B T_{parallel}(N,P))
-
-![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(1,1) + \frac{(1 - \alpha)(NT(1,1)}{P})
-
-![formula](https://render.githubusercontent.com/render/math?math=T(N,1) = \alpha(1,1) %2B (1-\alpha)NT(1,1))
+> Let's assume that the parallel contribution to runtime is proportional 
+> to the size of the system *N*. Then, the total runtime on *P* processors 
+> is:
+> ![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = T_{serial}(N,P) %2B T_{parallel}(N,P)),
+>
+> The total runtime on a single processor is:
+> ![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(1,1) + \frac{(1 - \alpha)(NT(1,1)}{P})
+> where &alpha; is the non-parallelisable fraction of the code.
+> It follows that the speedup:
+> ![formula](https://render.githubusercontent.com/render/math?math=T(N,1) = \alpha(1,1) %2B (1-\alpha)NT(1,1))
+{: .callout}
 
 ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{\alpha %2B (1-\alpha)N}{\alpha %2B (1-\alpha) \frac{N}{P}})
 
