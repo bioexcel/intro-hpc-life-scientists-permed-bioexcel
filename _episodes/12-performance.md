@@ -1,7 +1,7 @@
 ---
 title: "LECTURE: Measuring Parallel Performance"
-teaching: 30
-exercises: 0
+teaching: 20
+exercises: 10
 questions:
 - "What is performance and how is it measured?"
 - "What is scalability?"
@@ -34,20 +34,38 @@ amount of time as now.
 
 Unfortunately, this is often not the case...
 
+### How to measure parallel performance?
+
 Measuring parallel performance can help us to understand:
 
 - whether our application is making the most of the cores assigned to it
 - the factors that can improve or hinder performance
 - how best to use the application and available HPC resources
 
-### Defining performance using LAMMPS
+But, how do we quantify performance when running in parallel? Consider 
+a system with an execution time of *T* - this time will depend on the 
+size/complexity *N* of the system and the number of processors/cores *P* being 
+used to run this system. One way to measure performance could be to consider 
+the speedup of the system compared with a run on a single processor:
 
+![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)}).
 
-![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)})
+Ideally, the speedup increases in a linear fashion, meaning that as you double 
+the number of processors used, your speedup will also double. However, this is 
+rarely the case.
 
-![formula](https://render.githubusercontent.com/render/math?math=E(N,P) = \frac{S(N,P)}{P} = \frac{T(N,1)}{P T(N,P)})
+Another metric to consider is the parallel efficiency *E*(*N*, *P*). This is 
+a measure of how the speedup changes as the number of processors used is 
+increased:
 
-![formula](https://render.githubusercontent.com/render/math?math=E(N) = \frac{T_{best}(N)}{T(N,1)})
+![formula](https://render.githubusercontent.com/render/math?math=E(N,P) = \frac{S(N,P)}{P} = \frac{T(N,1)}{P T(N,P)}).
+
+Given that, in general, *S*(*N*, *P*) < *P*, it follows that *E*(*N*, *P*) < 1.
+
+Finally, it can be useful to estimate the efficiency of the parts of your code 
+that run only in parallel. The serial efficiency *E*(*N*) is measured by:
+
+![formula](https://render.githubusercontent.com/render/math?math=E(N) = \frac{T_{best}(N)}{T(N,1)}).
 
 ## Strong vs. weak scaling
 
@@ -78,16 +96,21 @@ Measuring parallel performance can help us to understand:
 > Let's assume that the parallel contribution to runtime is proportional 
 > to the size of the system *N*. Then, the total runtime on *P* processors 
 > is:
-> ![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = T_{serial}(N,P) %2B T_{parallel}(N,P)),
->
+> ![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = T_{serial}(N,P) %2B T_{parallel}(N,P))
+> ![formula](https://render.githubusercontent.com/render/math?math== \alpha T(1,1) %2B \frac{(1 - \alpha)NT(1,1)}{P})
 > The total runtime on a single processor is:
-> ![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(1,1) + \frac{(1 - \alpha)(NT(1,1)}{P})
+> ![formula](https://render.githubusercontent.com/render/math?math=T(N,1) = \alpha(1,1) %2B (1-\alpha)NT(1,1))
 > where &alpha; is the non-parallelisable fraction of the code.
 > It follows that the speedup:
-> ![formula](https://render.githubusercontent.com/render/math?math=T(N,1) = \alpha(1,1) %2B (1-\alpha)NT(1,1))
+> ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{\alpha %2B (1-\alpha)N}{\alpha %2B (1-\alpha) \frac{N}{P}})
+> If we scale the problem size with the number of processors (*e.g.* by setting *N* = 
+> *P* for weak scaling), then we expect a speedup 
+> *S*(*P*, *P*) = &alpha; + (1 - &alpha;)*P*
+> , and an efficiency
+> *E*(*P*, *P*) = &alpha; / P + (1 - &alpha;).
 {: .callout}
 
-![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{\alpha %2B (1-\alpha)N}{\alpha %2B (1-\alpha) \frac{N}{P}})
+
 
 
 
