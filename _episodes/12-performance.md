@@ -47,7 +47,7 @@ Measuring parallel performance can help us to understand:
 
 ![formula](https://render.githubusercontent.com/render/math?math=E(N,P) = \frac{S(N,P)}{P} = \frac{T(N,1)}{P T(N,P)})
 
-![formula](https://render.githubusercontent.com/render/math?math=E(N) = \frac{T_{best}(N)}{T(N,1})
+![formula](https://render.githubusercontent.com/render/math?math=E(N) = \frac{T_{best}(N)}{T(N,1)})
 
 ## Strong vs. weak scaling
 
@@ -57,6 +57,7 @@ Measuring parallel performance can help us to understand:
 
 ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{P}{\alpha P %2B (1 - \alpha)})
 
+![formula](https://render.githubusercontent.com/render/math?math=\begin{eqnarray} T(N,P) &=& T_{serial}(N,P) %2B T_{parallel}(N,P) \\ &=& \alpha T(1,1) + \frac{(1 - \alpha)(NT(1,1)}{P} \end{eqnarray} )
 
 
 ## Improving performance
