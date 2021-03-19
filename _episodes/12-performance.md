@@ -59,7 +59,7 @@ Measuring parallel performance can help us to understand:
 > for a fraction α of its runtime. If we can parallelise the potentially 
 > parallel part of the code with 100% efficience, then:
 > - the hypothetical runtime in parallel is: 
-> ¬[equation](https://latex.codecogs.com/gif.latex?\large&space;T(N,P)&space;=&space;\alpha&space;T(N,1)&space;&plus;&space;\frac{(1-\alpha)T(N,1)}{P})
+> ![equation](https://latex.codecogs.com/gif.latex?\large&space;T(N,P)&space;=&space;\alpha&space;T(N,1)&space;&plus;&space;\frac{(1-\alpha)T(N,1)}{P})
 > 
 > Blah
 >
