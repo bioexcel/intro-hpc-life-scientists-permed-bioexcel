@@ -51,13 +51,37 @@ Measuring parallel performance can help us to understand:
 
 ## Strong vs. weak scaling
 
-![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(N,1) %2B \frac{(1-\alpha)T(N,1)}{P})
-
-![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{P}{\alpha P %2B (1 - \alpha)})
+> ## Proof of Amdhal's Law
+> 
+> Consider a typical program -- this will have sections of code that could 
+> potentially run in parallel, and sections that are inherently serial and 
+> can't run in parallel. Let's further suppose that the serial code accounts 
+> for a fraction <img src="https://render.githubusercontent.com/render/math?math=\alpha">
+> of its runtime. If we can parallelise the potentially parallel part of the 
+> code with 100% efficience, then:
+> - the hypothetical runtime in parallel is: <img src="https://render.githubusercontent.com/render/math?math=T(N,P) = \alpha T(N,1) %2B \frac{(1-\alpha)T(N,1)}{P}">
+> - the hypothetical speedup is: <img src="https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{P}{\alpha P %2B (1 - \alpha)}">.
+>
+> This means that speedup is fundamentally limited by the serial fraction. No 
+> matter how large P becomes, the speedup <img src="https://render.githubusercontent.com/render/math?math=S(N,P) < \alpha^{-1}">
+>
+> ### Example for <img src="https://render.githubusercontent.com/render/math?math=\alpha = 0.1">:
+> - On 2 processors, the hypothetical speedup is https://render.githubusercontent.com/render/math?math=S(N,P) = 1.8">
+> - On 16 processors, the hypothetical speedup is https://render.githubusercontent.com/render/math?math=S(N,P) = 6.4">
+> - On 1024 processors, the hypothetical speedup is https://render.githubusercontent.com/render/math?math=S(N,P) = 9.9">
+>
+{: .callout}
 
 ![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{P}{\alpha P %2B (1 - \alpha)})
 
-![formula](https://render.githubusercontent.com/render/math?math=\begin{eqnarray} T(N,P) &=& T_{serial}(N,P) %2B T_{parallel}(N,P) \\ &=& \alpha T(1,1) + \frac{(1 - \alpha)(NT(1,1)}{P} \end{eqnarray} )
+![formula](https://render.githubusercontent.com/render/math?math=T(N,P) = T_{serial}(N,P) %2B T_{parallel}(N,P))
+
+![formula](https://render.githubusercontent.com/render/math?math= = \alpha T(1,1) + \frac{(1 - \alpha)(NT(1,1)}{P})
+
+![formula](https://render.githubusercontent.com/render/math?math=T(N,1) = \alpha(1,1) %2B (1-\alpha)NT(1,1))
+
+![formula](https://render.githubusercontent.com/render/math?math=S(N,P) = \frac{T(N,1)}{T(N,P)} = \frac{\alpha %2B (1-\alpha)N}{\alpha %2B (1-\alpha) \frac{N}{P}})
+
 
 
 ## Improving performance
