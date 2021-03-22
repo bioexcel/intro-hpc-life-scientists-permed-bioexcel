@@ -10,7 +10,7 @@ objectives:
 - "Understand typical/common architectures of HPC machines"
 - "Understand the difference between a shared memory and a distributed memory architecture"
 keypoints:
-- "To be determined"
+- ""
 ---
 
 ## Slides

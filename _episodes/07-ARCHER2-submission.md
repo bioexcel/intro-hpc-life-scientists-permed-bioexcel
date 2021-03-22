@@ -293,7 +293,7 @@ srun xthi
 ```
 {: .language-bash}
 
-> ## Fewer tasks then cores
+> ## Fewer tasks than cores
 > You may want to run fewer MPI tasks per node than there are cores per node
 > on ARCHER2 to access more memory, or more memory bandwidth, per task.
 > This requires the option ``--cpus-per-task`` to specify how many "cpus"
