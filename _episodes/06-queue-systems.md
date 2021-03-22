@@ -9,13 +9,15 @@ questions:
 objectives:
 - "Understand how running an HPC job works"
 keypoints:
-- "To be determined"
+- ""
 ---
 
 ## Slides
 
-This part of the course will be delivered using a slide presentation. You can
-find the slides for this [here](../slides/06-queue-systems.pdf).
+This talk is being provided as a [pre-recorded
+presentation](https://media.ed.ac.uk/media/Batch+systems+and+parallel+application+launchers/1_7qefzg7e)
+
+The slides used can be found [here](../slides/06-queue-systems.pdf).
 
 {% include links.md %}
 

@@ -14,7 +14,7 @@ objectives:
 - "Gain a framework within which to understand how any software of interest approaches parallelism"
 
 keypoints:
-- "To be determined"
+- ""
 ---
 
 ## Slides
