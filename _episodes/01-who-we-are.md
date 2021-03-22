@@ -17,6 +17,8 @@ keypoints:
 
 ## BioExcel
 
+[BioExcel Overview](../slides/BioExcel.pdf)
+
 BioExcel is a European Centre of Excellence for computational biomolecular
 research. Established in 2015, the centre has grown into a major research and
 innovation hub for scientific computing. BioExcel develops some of the most
@@ -37,6 +39,8 @@ with various governmental, non-profit, educational and policy projects and
 initiatives.
 
 ## PRACE
+
+### [PRACE, ARCHER2 & EPCC overview](../slides/01-ARCHER2-PATC-Intro.pdf)
 
 [PRACE](https://prace-ri.eu/) (Partnership for Advanced Computing in Europe)
 aims to enable high-impact scientific discovery and engineering research and
