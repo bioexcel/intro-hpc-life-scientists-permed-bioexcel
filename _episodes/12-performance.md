@@ -9,9 +9,12 @@ questions:
 objectives:
 - "Learning how to measure the performance of software."
 - "Understanding the difference between strong and weak scaling."
-- ""
+- "Understanding the importance of load balance."
 keypoints:
-- "To be determined"
+- "As the number of cores are increased, performance rarely scales linearly."
+- "Scalibility changes as the size and complexity of the system is changed."
+- "Scalibility can be meaningless if the work load is not distributed evenly 
+among processors."
 ---
 
 ## Parallel performance
@@ -205,7 +208,60 @@ alt="Illustration of Gustafson's law" %}
 
 ## Load imbalance
 
-So far, we've only considered systems where all processors are equally busy.
+The laws and thoughts above only apply to cases where all processors are 
+equally busy. What happens if some processors run out of work while others 
+are still busy?
+
+> ## Load imbalance in packing boxes
+>
+> Consider fours people tasked with filling boxed with cans. Each of them is 
+> in charge of placing one specific type of can (so Anna is in charge of the 
+> chopped tomatoes, Paul is in charge of the chickpeas, David is in charge of 
+> the sweetcorn, and Helen is in charge of the spinach). It takes 1 minute for 
+> each person to grab one tin and place it in the box, and each person can 
+> only carry one tin at a time. Multiple people can place a tin in the box at 
+> the same time. How long would it take to fill this box?
+>
+> | Person | N. tins  |
+> |--------|----------|
+> |   Anna |        6 |
+> |   Paul |        1 |
+> |  David |        3 |
+> |  Helen |        2 |
+> |--------|----------|
+> | **Total**|      12|
+> 
+>> ## Solution
+>> 
+>> Because each task (each placement of a tin) takes 1 minute, the box will 
+>> not be fully packed until Anna is finished. Therefore, it will take 6 
+>> minutes to complete this task. 
+>> 
+>> In the event that the group could not move on to the next box until this 
+>> box is fully packed, this would mean that Paul, David, and Helen would be 
+>> doing nothing and waiting for Anna to finish for some time (5 minutes in 
+>> Paul's case!).
+>>
+>{: .solution}
+{: .challenge}
+
+Scalibility isn't everything! It's also important to make the best use of all 
+processors at hand before increasing the number of processors.
+
+### Quantifying load imbalance
+
+We can define a "load imbalance factor" as being the ratio of the maximum load 
+(the load on the most used processor) over the average load on all processors: 
+*LIF* = maximum load / average load.
+
+This is a measure of how much faster your calculation would be if your system 
+was balanced. For a perfectly balanced system, *LIF* = 1.0, but this is rarely 
+achieved. In general, *LIF* will be greater than 1.0.
+
+For the box packing example above, the average load is 3 tins per worker, and 
+the maximum load is 6 tins for Anna to pack. In this case, *LIF* = 2. We could 
+therefore decrease the processing time by a factor of 2 by distributing the 
+tasks more evenly!
 
 {% include links.md %}
 
