@@ -17,7 +17,7 @@ keypoints:
 
 You can find the instructions for this practical session [here](../slides/CP2K-instructions.pdf).
 
-## Introductory slides
+## Results
 
 You can find some results and discussion for this practical  [here](../slides/CP2K-practical_results.pdf).
 

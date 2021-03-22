@@ -19,7 +19,7 @@ You can find the instructions for this practical session [here](../slides/CP2K-i
 
 ## Introductory slides
 
-You can find the instructions for this practical session [here](../slides/CP2K-practical_overview.pdf).
+You can find the introduction to this practical session [here](../slides/CP2K-practical_overview.pdf).
 
 {% include links.md %}
 
