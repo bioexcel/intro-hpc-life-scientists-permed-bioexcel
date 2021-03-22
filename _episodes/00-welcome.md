@@ -19,18 +19,19 @@ attendees."
 improve and make sure the course is as useful as possible to attendees."
 ---
 
+[Introduction](../slides/00-intro.pdf)
+
+
 ## Course structure and method
 
-Rather than having separate lectures and practical sessions, this course is
-taught following [The Carpentries methodology](https://carpentries.org) where
-we all work together through material learning key skills and information
-throughout the course. Typically, this follows the method of the instructor
-demonstrating and then the attendees doing along with the instructor.
+Some parts of this course are taught following [The Carpentries
+methodology](https://carpentries.org). Typically, this follows the
+method of the instructor demonstrating and the attendees following 
+along with the instructor.
 
-There are many helpers available to assist you and to answer any questions you
-may have as we work through the material together. You should also feel free
-to ask questions of the instructor whenever you like. The instructor will also
-provide many opportunities to pause and ask questions.
+You should feel free to ask questions of the instructors whenever you
+like. The instructor will also provide opportunities to pause and
+ask questions.
 
 We will also make use of a shared collaborative document - the *etherpad*. You
 will find a link to this collaborative document on the course page. We will
@@ -45,28 +46,14 @@ information you found useful.
 
 ## Feedback
 
-Feedback is integral to how we approach training both during and after the
-course. In particular, we use informal and structured feedback activities
-during the course to ensure we tailor the pace and content appropriately for
-the attendees and feedback after the course to help us improve our training
-for the future.
+Feedback is integral to how we approach training both during and after
+the course. In particular, we use feedback during the course to ensure
+we tailor the pace and content appropriately for the attendees and
+feedback after the course to help us improve our training for the
+future.
 
-You will be issued with red and green "stickies" (or shown how to use their
-virtual equivalent for online courses) to allow you give the instructor and
-helpers quick visual feedback on how you are getting on with the pace and the
-content of the course. If you are comfortable with the pace/content then you
-should place your green sticky on the back of your laptop; if you are stuck,
-have questions, or are struggling with the pace/content then you should place
-the red sticky on the back of your laptop and a helper will come and speak to
-you. The instructor may also ask you to use the stickies in other, specific
-situations.
-
-At the lunch break (and end of days for multi-day courses) we will also run a
-quick feedback activity to gauge how the course is matching onto attendees
-requirements. Instructors and helpers will review this feedback over lunch
-(or overnight) and provide a summary of what we found at the start of the next
-session and, potentially, how the upcoming material/schedule will be changed
-to address the feedback.
+At the end of each day we will also run a quick feedback activity to
+gauge how the course is matching onto attendees requirements. 
 
 Finally, you will be provided with the opportunity to provide feedback on the
 course after it has finished. We welcome all this feedback, both good and bad,
