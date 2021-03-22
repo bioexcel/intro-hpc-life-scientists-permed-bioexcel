@@ -7,6 +7,7 @@
 #SBATCH --time=0:5:0
 #SBATCH --account=ta017
 #SBATCH --partition=standard
+#SBATCH --qos=standard
 #SBATCH --reservation=ta017_138
 
 # Setup the batch environment
