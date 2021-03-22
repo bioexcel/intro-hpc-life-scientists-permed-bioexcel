@@ -15,8 +15,13 @@ keypoints:
 
 ## Slides
 
-This part of the course will be delivered using a slide presentation. You can
-find the slides for this [here](../slides/04-HPC-architecture.pdf).
+
+This talk is being provided as a [pre-recorded
+presentation](https://media.ed.ac.uk/media/HPC+Architectures/1_5sndyyoh)
+
+The slides used can be found [here](../slides/04-HPC-architecture.pdf).
+
+
 
 {% include links.md %}
 
