@@ -3,7 +3,7 @@ title: "PRACTICAL: QM/MM Simulations Using CP2K 2"
 teaching: 10
 exercises: 20
 questions:
-- "When is using MPI+OpenMP useful?"
+- "How can using MPI+OpenMP benefit the performance of an application?"
 - "Why is profiling code useful?"
 - "What are communication overheads and how these might change on different numbers of processes or threads?"
 objectives:
@@ -19,7 +19,7 @@ You can find the instructions for this practical session [here](../slides/CP2K-i
 
 ## Introductory slides
 
-You can find the instructions for this practical session [here](../slides/CP2K-practical_overview.pdf).
+You can find some results and discussion for this practical  [here](../slides/CP2K-practical_results.pdf).
 
 {% include links.md %}
 
