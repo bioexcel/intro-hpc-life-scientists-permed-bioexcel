@@ -112,7 +112,7 @@ If you finish early, you can try generating this same table for the GROMACS
 benchPEP benchmark. You can get the benchmark by running:
 
 ```
-wget https://www.mpibpc.mpg.de/15101317/benchPEP.zip
+wget https://www.mpibpc.mpg.de/15615646/benchPEP.zip
 unzip benchPEP.zip
 ```
 
