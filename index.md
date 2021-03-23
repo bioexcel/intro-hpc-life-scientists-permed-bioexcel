@@ -153,5 +153,3 @@ root: .
 <hr/>
 
 {% include links.md %}
-
-<h2> test </h2>

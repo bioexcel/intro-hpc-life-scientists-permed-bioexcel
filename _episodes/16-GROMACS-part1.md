@@ -62,12 +62,15 @@ directory `/work/ta017/shared/GMX_sub.slurm`.
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
 
+#SBATCH --distribution=block:block
+#SBATCH --hint=nomultithread
+
 module restore /etc/cray-pe.d/PrgEnv-gnu
 module load gromacs
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-srun --distribution=block:block --hint=nomultithread gmx_mpi mdrun -ntomp $SLURM_CPUS_PER_TASK -s benchMEM.tpr
+srun gmx_mpi mdrun -ntomp $SLURM_CPUS_PER_TASK -s benchMEM.tpr
 ```
 {: .language-bash}
 
