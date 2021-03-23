@@ -96,28 +96,16 @@ nid001008      1    standard        idle  256   2:64:2 244046        0      1   
 {: .output}
 
 > ## Explore a compute node
-> Let us look at the resources available on the compute nodes where your jobs will actually run. Try running this
-> command to see the name, CPUs and memory available on the worker nodes (the instructors will give you the ID of
-> the compute node to use):
+> Let us look at the resources available on the compute nodes where your jobs 
+> will actually run. Try running this command to see the name, CPUs and memory 
+> available on the worker nodes (the instructors will give you the ID of the 
+> compute node to use):
 > ```
 > [auser@login01-nmn:~> sinfo -n nid001005 -o "%n %c %m"
 > ```
 > {: .language-bash}
-> This should display the resources available for a standard node. Can you use `sinfo` to find out the range of
-> node IDs for the high memory nodes?
-> > ## Solution
-> > The high memory nodes have IDs `nid001001-nid001004`. You can get this by using:
-> >
-> > ```
-> > auser@login01-nmn:~> sinfo -N -l -S "-m" | less
-> > ```
-> > {: .language-bash}
-> >
-> > The `-S "-m"` option tells `sinfo` to print the node list sorted by decreasing memory per node. This
-> > output is then piped into `less` so we can examine the output a page at a time without it scrolling
-> > off the screen.
-> >
-> {: .solution}
+> This should display the resources available for a standard node.
+>
 > It is also possible to search nodes by state. Can you find all the free nodes in the system?
 > > ## Solution
 > > `sinfo` lets you specify the state of a node to search for, so to get all the free nodes in the system you can use:
@@ -125,8 +113,8 @@ nid001008      1    standard        idle  256   2:64:2 244046        0      1   
 > > sinfo -N -l --state=idle
 > > ```
 > > More information on what `sinfo` can display can be found in the `sinfo` manual page, i.e. `man sinfo`
+>> 
 > {: .solution}
-
 {: .challenge}
 
 ## Using batch job submission scripts
@@ -158,7 +146,7 @@ physical core).
 #SBATCH --ntasks-per-node=128
 
 #SBATCH --hint=nomultithread
-#SBATCH --distribution=block:cyclic
+#SBATCH --distribution=block:block
 
 # Load the default programming environment, and the xthi utility
 module load epcc-job-env
@@ -257,20 +245,6 @@ auser@login01-nmn:~> squeue
 
 You can use the `scancel` command to cancel jobs that are queued or running. When used on running jobs
 it stops them immediately.
-
-<!-- Great content, not currently available
-> ## Getting notified
-> Slurm on ARCHER2 can also send e-mails to notify you when your job starts, ends, fails, etc. Can
-> you find out how you would setup your job script to send you an e-mail when your job finishes and
-> when it fails? Test your answer, does it work?
-> > ## Solution
-> > The option `--mail-type=END,FAIL` will send mailings to you when the job ends or fails. You can
-> > also use the event `TIME_LIMIT` to notify you if a job reaches its walltime without finishing and
-> > the events `TIME_LIMIT_50`, `TIME_LIMIT_80` and `TIME_LIMIT_90` to notify you when your job is
-> > 50%, 80% and 90% of the way through the specified walltime.
-> {: .solution}
-{: .challenge}
--->
 
 ### Running parallel applications using `srun`
 

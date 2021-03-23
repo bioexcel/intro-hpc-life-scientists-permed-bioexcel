@@ -44,6 +44,11 @@ etherpad, remove any personally-identifiable information and post this on the
 course archive page so you should always be able to come back and find any
 information you found useful.
 
+## Using Collaborate
+
+{% include figure.html url="" max-width="80%"
+file="/fig/collaborate.jpg" alt="Using collaborate" %}
+
 ## Feedback
 
 Feedback is integral to how we approach training both during and after
