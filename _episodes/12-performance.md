@@ -66,7 +66,7 @@ increased:
 Given that, in general, *S*(*N*, *P*) < *P*, it follows that *E*(*N*, *P*) < 1.
 
 Finally, it can be useful to estimate the efficiency of the parts of your code 
-that run only in parallel. The serial efficiency *E*(*N*) is measured by:
+that run only in serial. The serial efficiency *E*(*N*) is measured by:
 
 ![formula](https://render.githubusercontent.com/render/math?math=E(N) = \frac{T_{best}(N)}{T(N,1)}.)
 
