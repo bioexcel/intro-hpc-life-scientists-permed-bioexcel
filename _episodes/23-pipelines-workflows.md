@@ -4,22 +4,22 @@ teaching: 45
 exercises: 0
 questions:
 - "Is it possible to run data-intensive computational pipelines (e.g. bioinformatics) in parallel on HPC?"
-- "How about running defined workflows using workflow managers?"
+- "How about biomolecular simulation workflows?"
 objectives:
-- "To be determined"
+- "Understand some of the challenges in involved in running bioinformatics software on HPC machines"
+- "Learn about options for running biomolecular simulation workflows on HPCs"
 keypoints:
-- "To be determined"
+- ""
 ---
 
-## Bioinformatics and pipelines
+## Slides
 
-## Hadoop
+This part of the course will be delivered using a slide presentation:
 
-## Halvade
+[Bioinformatics pipelines on HPC?](../slides/21-pipelines-workflows.pdf)
 
-## Workflow and pipeline languages, tools, and frameworks
+[Adapting biomolecular workflows to HPC: BBioBB+PyCOMPSs](../slides/biobb_hpc_workflows.pdf)
 
-## Containers
 
 {% include links.md %}
 

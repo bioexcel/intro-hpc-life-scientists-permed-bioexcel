@@ -9,9 +9,9 @@ questions:
 - "What compiler should I use?"
 
 objectives:
-- "To be determined"
+- ""
 keypoints:
-- "To be determined"
+- ""
 ---
 
 ## Slides
