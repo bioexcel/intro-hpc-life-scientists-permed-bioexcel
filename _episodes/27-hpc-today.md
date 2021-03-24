@@ -28,7 +28,7 @@ cateforised in higher tiers. In the UK, there are 3 tiers of supercompters:
 - Tier 1 facilities are nationally-leading centres (like ARCHER2). There is 
   usually one or two per country.
 - Tier 0 systems are petaflop systems, and the best across a continent. PRACE
-  provides access to [7 Tier 0 systems](https://prace-ri.eu/hpc-access/hpc-systems/).
+  provides access to [7 systems](https://prace-ri.eu/hpc-access/hpc-systems/).
   - Newer EU machines being delivered under [EuroHPC Joint Undertaking](https://eurohpc-ju.europa.eu/)
 
 {% include links.md %}
