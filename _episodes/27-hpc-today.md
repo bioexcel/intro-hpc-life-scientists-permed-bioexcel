@@ -9,7 +9,7 @@ objectives:
 - ""
 keypoints:
 - "You can find more about the state of HPC in the UK [here](https://www.hpc-uk.ac.uk/)"
-- "You can learn more about HPC facilities across europe [here](https://prace-ri.eu/)"
+- "You can learn more about HPC facilities across Europe on the [PRACE](https://prace-ri.eu/) and [EuroHPC](https://eurohpc-ju.europa.eu/) websites"
 ---
 
 ## HPC in the EU and UK
