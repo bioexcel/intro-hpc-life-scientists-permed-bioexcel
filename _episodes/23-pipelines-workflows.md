@@ -18,7 +18,7 @@ This part of the course will be delivered using a slide presentation:
 
 [Bioinformatics pipelines on HPC?](../slides/21-pipelines-workflows.pdf)
 
-[Adapting biomolecular workflows to HPC: BBioBB+PyCOMPSs](../slides/biobb_hpc_workflows.pdf)
+[Adapting biomolecular workflows to HPC: BBioBB+PyCOMPSs](../slides/biobb_HPC_workflows.pdf)
 
 
 {% include links.md %}
