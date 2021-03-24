@@ -1,7 +1,7 @@
 ---
 title: "PRACTICAL: QM/MM simulations with CP2K"
 teaching: 10
-exercises: 20
+exercises: 50
 questions:
 - "How can using MPI+OpenMP benefit the performance of an application?"
 - "Why is profiling code useful?"
