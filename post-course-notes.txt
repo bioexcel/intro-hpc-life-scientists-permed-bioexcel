@@ -1,0 +1,50 @@
+Intro to HPC post-course reivew
+===============================
+
+Course changes suggested by organisers:
+---------------------------------------
+ - Setup needs to be re-written so as not to just have a bunch of links
+ - ARCHER2 system & modules
+   - Why talk about ARCHER2 hardware here? Probably better in building
+     blocks.
+   - Adding more pictures of e.g. blades/cabinets/etc.
+   - Specific ARCHER2 hardware should be added to Building Blocks:
+     Hardware
+ - HMMER 1
+   - Why compile? Provide as modules ahead of time may be better.
+ - Measuring parallel performance:
+   - could do with 5-10 mins extra
+   - need to focus more on why this matters and what can be learned here.
+ - Building blocks
+   - Maybe split the software into OS and Processes & threads
+     - OS would go with ARCHER2 system & modules/Architecture
+     - Processes and threads could be combined with BB:Hardware
+   - Hardware overran by ~10 mins -- likely fixed if combined with
+     processes and threads.
+   - Hardware could be linked to system being used.
+ - GROMACS 1
+   - could do with an extra 10 mins or a break right afterwards
+   - Maybe swap with Parallel programming patterns for break?
+ - Compilers
+   - Maybe add practical? To be discussed.
+ - GROMACS 3
+   - should be 10 mins longer
+ - Pipelines/workflow
+   - should be 10 mins shorter
+
+Feedback change suggestions:
+----------------------------
+ - Practicals:
+   - Need more time for them (x3)
+   - Please share results and how you got them (x2)
+   - More practicals (x2)
+     - Workflow practicals e.g. nextflow or to PyCOMPSS
+   - Better cohesion between practicals and course material
+ - 20' sessions were sometimes too short and explanations too fast.
+   - In particular measuring parallel performance.
+     - Could this be a practical
+     - what was the importance of doing performance benchmarking?
+ - Perhaps end the course with some recommendations?
+ - 11:00 CET is a late start.
+ - 2-day course instead?
+ - Breakout rooms to deal with login issues
