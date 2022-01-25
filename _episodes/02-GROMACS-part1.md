@@ -51,26 +51,25 @@ directory `/work/ta017/shared/GMX_sub.slurm`.
 ```
 #!/bin/bash
 
-#SBATCH --job-name=GMX_test
-#SBATCH --account=ta017
-#SBATCH --partition=standard
-#SBATCH --qos=short
-#SBATCH --reservation=shortqos
-#SBATCH --time=0:5:0
-
+#SBATCH --qos=debug
+#SBATCH --time=0:40:0
 #SBATCH --nodes=1
-#SBATCH --tasks-per-node=1
+#SBATCH --tasks-per-node=48
 #SBATCH --cpus-per-task=1
 
-#SBATCH --distribution=block:block
-#SBATCH --hint=nomultithread
-
-module restore /etc/cray-pe.d/PrgEnv-gnu
-module load gromacs
+module load intel/2020.1
+module load impi/2018.4
+module load mkl/2020.1
+module load gcc/9.2.0
+module load gromacs/2021.2
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-srun gmx_mpi mdrun -ntomp $SLURM_CPUS_PER_TASK -s benchMEM.tpr
+echo "OMP NUM THREADS = ${OMP_NUM_THREADS}"
+
+cd 24_cores
+srun gmx_mpi mdrun -ntomp ${SLURM_CPUS_PER_TASK} -s ../../benchmark.tpr
+
 ```
 {: .language-bash}
 
@@ -90,21 +89,20 @@ of cores being used? You can vary this by changing
  |Number of cores| Walltime | Performance (ns/day) | Performance (hours/ns) |
  |---------------|----------|----------------------|------------------------|
  |   1  | | | |
- |   2  | | | |
- |   4  | | | |
- |   8  | | | |
- |  16  | | | |
- |  32  | | | |
- |  64  | | | |
- | 128  | | | |
- | 256* | | | |
- | 512* | | | |
+ |   3  | | | |
+ |   6  | | | |
+ |  12  | | | |
+ |  24  | | | |
+ |  48  | | | |
+ |  96* | | | |
+ | 192* | | | |
+ | 384* | | | |
 
  ---
  **NOTE**
 
  Jobs run on more than one node will need to be run with constant
- `#SBATCH --tasks-per-node=128` but varying `#SBATCH --nodes=1`
+ `#SBATCH --tasks-per-node=48` but varying `#SBATCH --nodes=1`
 
  ---
 
