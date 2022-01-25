@@ -35,26 +35,25 @@ serves as a prototypical example for a large class of setups used to study all
 kinds of membrane-embedded proteins.For some more information see
 [here](https://www.mpibpc.mpg.de/16460085/bench.pdf).
 
-To get a copy of "benchMEM", run the following from your work directory:
+You can get a copy of the benchMEM binary run input file (`benchMEM.tpr`) by running:
 
 ```
-wget https://www.mpibpc.mpg.de/15101317/benchMEM.zip
-unzip benchMEM.zip
+cp /gpfs/projects/nct00/nct00004/GROMACS_practicals/benchMEM.tpr ./
 ```
 {: .language-bash}
 
-Once the file is unzipped, you will need to create a Slurm submission script.
-Below is a copy of a script that will run on a single node, using a single
-processor. You can either copy the script from here, or from ARCHER2 in
-directory `/work/ta017/shared/GMX_sub.slurm`.
+Once you've copied the file over, you will need to create a Slurm submission 
+script. Below is a copy of a script that will run on a single node, using a 
+single processor. You can either copy the script from here, or from 
+MareNostrum in `/gpfs/projects/nct00/nct00004/GROMACS_practicals/sub.slurm`.
 
 ```
 #!/bin/bash
 
 #SBATCH --qos=debug
-#SBATCH --time=0:40:0
+#SBATCH --time=0:25:0
 #SBATCH --nodes=1
-#SBATCH --tasks-per-node=48
+#SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
 
 module load intel/2020.1
@@ -67,8 +66,7 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 echo "OMP NUM THREADS = ${OMP_NUM_THREADS}"
 
-cd 24_cores
-srun gmx_mpi mdrun -ntomp ${SLURM_CPUS_PER_TASK} -s ../../benchmark.tpr
+srun gmx_mpi mdrun -ntomp ${SLURM_CPUS_PER_TASK} -s benchMEM.tpr
 
 ```
 {: .language-bash}
@@ -77,7 +75,7 @@ Run this script to make sure that it works -- how quickly does the job
 complete? You can see the walltime and performance of your code by running
 `tail md.log`. This simulation is meant to perform 10,000 steps, each of which
 should simulate 2 ps of "real-life" time. The "Walltime" tells you how quickly
-the job ran on ARCHER2, and the "Performance data will let you know how many
+the job ran on MareNostrum, and the "Performance" data will let you know how many
 nanoseconds you can run in a day, and how many hours it will take to run a
 nanosecond of simulation.
 
@@ -110,9 +108,9 @@ If you finish early, you can try generating this same table for the GROMACS
 benchPEP benchmark. You can get the benchmark by running:
 
 ```
-wget https://www.mpibpc.mpg.de/15615646/benchPEP.zip
-unzip benchPEP.zip
+cp /gpfs/projects/nct00/nct00004/GROMACS_practicals/benchMEM.tpr ./
 ```
+{: .language-bash}
 
 This is a much larger system (12M atoms compared with 80k atoms for the
 benchPEP system). How does the performance scaling of this system compare with
