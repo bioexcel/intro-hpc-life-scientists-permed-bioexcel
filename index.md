@@ -20,6 +20,11 @@ root: .
 
 <h2>Description</h2>
 
+  The material here is for the second day of the 3-day "Introduction to 
+  high-performance computing for life scientists" course. Additional 
+  information about this course can be found 
+  [here](https://events.prace-ri.eu/event/1304/overview).
+
   High-performance computing (HPC) is a fundamental technology used to solve 
   a wide range of scientific research problems. Many important challenges in 
   science such as protein folding, the search for the Higgs boson, drug 
@@ -84,10 +89,12 @@ root: .
   Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by the <a href="https://www.archer2.ac.uk/training/code-of-conduct/">ARCHER2 Training Code of Conduct</a>.
+  <strong>Requirements:</strong> Participants must have their own local 
+  workstation (such as a laptop or desktop) with a Mac, Linux, or Windows 
+  operating system (not a tablet, Chromebook, etc.) on which they have 
+  administrative privileges. They should have a few specific software packages 
+  installed (listed
+  <a href="#setup">below</a>).
 </p>
 
 {% comment %}
