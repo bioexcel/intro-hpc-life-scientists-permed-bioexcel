@@ -64,8 +64,6 @@ module load gromacs/2021.2
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-echo "OMP NUM THREADS = ${OMP_NUM_THREADS}"
-
 srun gmx_mpi mdrun -ntomp ${SLURM_CPUS_PER_TASK} -s benchMEM.tpr
 
 ```
