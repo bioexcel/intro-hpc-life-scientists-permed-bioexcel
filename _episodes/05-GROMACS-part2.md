@@ -37,7 +37,8 @@ of `--cpus-per-task` should usually be the same as that for
 
 As an example, consider the job script below that runs across 1 nodes with
 24 MPI tasks per node and 2 OpenMP threads per MPI task (so all 48 cores
-are used).
+are used). You can find a copy of this script at: 
+/gpfs/projects/nct00/nct00004/GROMACS_practicals/sub_prac2.slurm`.
 
 ```
 #!/bin/bash
