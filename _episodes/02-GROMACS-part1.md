@@ -106,7 +106,7 @@ If you finish early, you can try generating this same table for the GROMACS
 benchPEP benchmark. You can get the benchmark by running:
 
 ```
-cp /gpfs/projects/nct00/nct00004/GROMACS_practicals/benchMEM.tpr ./
+cp /gpfs/projects/nct00/nct00004/GROMACS_practicals/benchPEP.tpr ./
 ```
 {: .language-bash}
 
