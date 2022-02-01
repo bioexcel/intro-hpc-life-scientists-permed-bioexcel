@@ -20,7 +20,8 @@ keypoints:
 ## Slides
 
 This part of the course will be delivered using a slide presentation. You can
-find the slides for this [here](../slides/15-building-blocks-hardware.pdf).
+find the slides for this 
+[here](https://github.com/bioexcel/intro-hpc-life-scientists-permed-bioexcel/blob/gh-pages/slides/15-building-blocks-hardware.pdf).
 
 {% include links.md %}
 
